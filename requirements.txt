@@ -1,0 +1,13 @@
+ipykernel
+pandas
+rdkit
+icecream
+lightning
+pydantic
+transformers
+torch-geometric
+loguru
+joblib
+pymatgen
+addict
+scikit-learn

@@ -1,0 +1,9 @@
+ipykernel
+pandas
+rdkit
+icecream
+lightning
+pydantic
+transformers
+torch-geometric
+loguru
