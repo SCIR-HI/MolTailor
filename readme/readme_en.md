@@ -27,7 +27,7 @@
 
 Deep learning is now widely used in drug discovery, providing significant acceleration and cost reduction. As the most fundamental building block, molecular representation is essential for predicting molecular properties to enable various downstream applications. Most existing methods attempt to incorporate more information to learn better representations. However, not all features are equally important for a specific task. Ignoring this would potentially compromise the training efficiency and predictive accuracy. To address this issue, we propose a novel approach, which treats language models as an agent and molecular pretraining models as a knowledge base. The agent accentuates task-relevant features in the molecular representation by understanding the natural language description of the task, just as a tailor customizes clothes for clients. Thus, we call this approach **MolTailor**. Evaluations demonstrate MolTailor's superior performance over baselines, validating the efficacy of enhancing relevance for molecular representation learning. This illustrates the potential of language model guided optimization to better exploit and unleash the capabilities of existing powerful molecular representation methods.
 
-![MolTailor](./src/overall.svg)
+![MolTailor](./src/overall.png)
 
 ## Table of Contents
 - [1 File Structure](#1-file-structure)
@@ -248,8 +248,8 @@ Supported model names include:
 
 Among these, `DEN-f9x97q2q` represents MolTailor using PubMedBERT and CHEM-BERT as backbones, `DEN-ChemBERTa-u02pzsl2` represents MolTailor using PubMedBERT and ChemBERTa as backbones, and `DEN-ChemBERTa-0al3aezz` represents MolTailor using BioLinkBERT and ChemBERTa as backbones.
 
-## 引用
-```
+## Citation
+```bibtex
 @article{guo2024moltailor,
   title={MolTailor: Tailoring Chemical Molecular Representation to Specific Tasks via Text Prompts},
   author={Guo, Haoqiang and Zhao, Sendong and Wang, Haochun and Du, Yanrui and Qin, Bing},

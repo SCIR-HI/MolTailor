@@ -27,7 +27,7 @@
 
 如今深度学习技术已在药物发现领域得到广泛应用，加速了药物研发速度并降低了研发成本。分子表征学习是该应用的重要基石，对分子性质预测等下游应用具有重要意义。现有的大多数方法仅试图融入更多信息来学习更好的表征。然而，对于特定任务并非所有特征都是同等重要的。忽略这一点将潜在地损害分子表征在下游任务上的训练效率和预测准确性。为了解决这一问题，我们提出一种新颖的方法：该方法将语言模型视为智能体（Agent），将分子预训练模型视为知识库（KB）。语言模型通过理解任务描述，增强分子表征中任务相关特征的权重。因为该方法就像裁缝根据客户的要求定制衣服，所以我们将这种方法称为**MolTailor**。您可以[点击这里](https://mp.weixin.qq.com/s/ZqQb6hr5egKRJj2Fr0VRlA)阅读文章的中文版本。
 
-![MolTailor](./src/overall.svg)
+![MolTailor](./src/overall.png)
 
 ## 目录
 - [1 文件结构](#1-文件结构)
@@ -243,7 +243,7 @@ zsh linear-probe-molnet-lite.sh 模型名称
 其中，`DEN-f9x97q2q`表示使用PubMedBERT与CHEM-BERT作为Backbone的MolTailor，`DEN-ChemBERTa-u02pzsl2`表示使用PubMedBERT与ChemBERTa作为Backbone的MolTailor，`DEN-ChemBERTa-0al3aezz`表示使用BioLinkBERT与ChemBERTa作为Backbone的MolTailor。
 
 ## 引用
-```
+```bibtex
 @article{guo2024moltailor,
   title={MolTailor: Tailoring Chemical Molecular Representation to Specific Tasks via Text Prompts},
   author={Guo, Haoqiang and Zhao, Sendong and Wang, Haochun and Du, Yanrui and Qin, Bing},
