@@ -4,20 +4,23 @@
 <div align="center">
     <a href='readme_zh.md'>🇨🇳 <strong>中文</strong></a> | <a href='readme_en.md'>🌐 <strong>English</strong></a>
 </div>
-<p align="center">
-    <a href="https://arxiv.org/abs/2401.11403">
+<div align="center">
+    <a href="https://arxiv.org/abs/2401.11403" style="text-decoration: none;">
         <img src="https://img.shields.io/badge/Preprint-arXiv-red" alt="Preprint on arXiv">
     </a>
-    <a href="https://aaai.org/aaai-conference/">
+    <a href="https://aaai.org/aaai-conference/" style="text-decoration: none;">
         <img src="https://img.shields.io/badge/Accepted-AAAI%202024-blue" alt="Paper Accepted at AAAI 2024">
     </a>
-    <a href="https://pytorch.org/">
+    <a href="https://pytorch.org/" style="text-decoration: none;">
         <img src="https://img.shields.io/badge/Framework-PyTorch-orange" alt="Deep Learning Framework: PyTorch">
     </a>
-        <a href="https://lightning.ai/docs/pytorch/stable/">
+        <a href="https://lightning.ai/docs/pytorch/stable/" style="text-decoration: none;">
         <img src="https://img.shields.io/badge/Framework-Lightning-purple" alt="Deep Learning Framework: PyTorch">
     </a>
-</p>
+    <a href="http://ir.hit.edu.cn/" style="text-decoration: none;">
+        <img src="https://img.shields.io/badge/Research%20Lab-SCIR-brightgreen" alt="Research Lab: SCIR">
+    </a>
+</div>
 
 # MolTailor
 
