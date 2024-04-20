@@ -1,13 +1,38 @@
+<div align="center">
+    <img src="./src/moltailor-icon.png" width="80%">
+</div>
+<div align="center">
+    <a href='readme_zh.md'>🇨🇳 <strong>中文</strong></a> | <a href='readme_en.md'>🌐 <strong>English</strong></a>
+</div>
+<p align="center">
+    <a href="https://arxiv.org/abs/2401.11403">
+        <img src="https://img.shields.io/badge/Preprint-arXiv-red" alt="Preprint on arXiv">
+    </a>
+    <a href="https://aaai.org/aaai-conference/">
+        <img src="https://img.shields.io/badge/Accepted-AAAI%202024-blue" alt="Paper Accepted at AAAI 2024">
+    </a>
+    <a href="https://pytorch.org/">
+        <img src="https://img.shields.io/badge/Framework-PyTorch-orange" alt="Deep Learning Framework: PyTorch">
+    </a>
+        <a href="https://lightning.ai/docs/pytorch/stable/">
+        <img src="https://img.shields.io/badge/Framework-Lightning-purple" alt="Deep Learning Framework: PyTorch">
+    </a>
+</p>
+
 # MolTailor
+
+
+
+
 文章[MolTailor: Tailoring Chemical Molecular Representation to Specific Tasks via Text Prompts](https://arxiv.org/abs/2401.11403)的源码（发表在AAAI 2024）。
 
-<div style="background-color: #ffffcc; padding: 10px; border-left: 6px solid #ffeb3b;">
-  <strong>注意：</strong>在本项目中MolTailor被命名为DEN
-</div>
+
+> **注意**：!!! 在本项目中MolTailor被命名为***DEN*** !!!
+
 
 ![MolTailor](./src/overall.svg)
 
-## 文件结构
+## 1 文件结构
 ```bash
 .
 ├── mt-mtr-build # 用于构建MT-MTR预训练预料的代码
@@ -78,3 +103,42 @@
     ├── linear-probe-molnet.sh # 下游任务脚本
     └── linear-probe-molnet-lite.sh
 ```
+
+## 2 环境配置
+由于下游任务中，Baseline模型Uni-Mol的环境配置较为麻烦，因此我们提供了两种方式的环境配置方案：完整与轻量化配置。完整配置方案对cuda版本要求较为严格，受uni-mol模型的依赖影响，因此如果你的环境不满足完整配置的要求，可以选择轻量化配置方案。
+## 2.1 完整环境
+```bash
+conda create -n moltailor python=3.9
+conda activate moltailor
+conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.8 -c pytorch -c nvidia # 推荐这里使用的pytorch与cuda版本，以满足后续uni-mol模型的依赖
+
+cd MolTailor/
+pip install -r requirements.txt
+pip install dgl -f https://data.dgl.ai/wheels/cu118/repo.html 
+pip install torch-scatter -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
+
+wget https://github.com/dptech-corp/Uni-Core/releases/download/0.0.3/unicore-0.0.1+cu118torch2.0.0-cp39-cp39-linux_x86_64.whl # 你可以从原项目中下载适合自己的版本：https://github.com/dptech-corp/Uni-Core/releases/tag/0.0.3
+pip install unicore-0.0.1+cu118torch2.0.0-cp39-cp39-linux_x86_64.whl
+rm unicore-0.0.1+cu118torch2.0.0-cp39-cp39-linux_x86_64.whl # 安装完成后删除
+```
+
+## 2.2 轻量化环境
+```bash
+conda create -n moltailor python=3.9
+conda activate moltailor
+conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.8 -c pytorch -c nvidia # 可选择适合自己的版本
+
+cd MolTailor/
+pip install -r requirements.txt
+pip install dgl -f https://data.dgl.ai/wheels/cu118/repo.html # 你可以从官网下载合适自己的版本：https://www.dgl.ai/pages/start.html
+pip install torch-scatter -f https://data.pyg.org/whl/torch-2.0.0+cu118.html # 你可以从官网下载适合自己的版本：https://pypi.org/project/torch-scatter/
+```
+
+## 3 预训练
+### 3.1 MT-MTR预料构建
+### 3.2 预训练
+
+## 4 下游任务
+
+
+## 引用
