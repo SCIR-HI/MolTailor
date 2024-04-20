@@ -2,7 +2,11 @@
 
 source ~/.zshrc
 
-conda activate st
+conda activate moltailor
+
+if [ ! -d "../pretrain/workspace" ]; then
+  mkdir "../pretrain/workspace"
+fi
 
 python ../pretrain/main.py \
 --seed                  42 \
@@ -13,12 +17,8 @@ python ../pretrain/main.py \
 --max_epochs            50 \
 --devices               2 \
 --precision             "bf16-mixed" \
---overfit_batches       0.0 \
 --use_tune              0 \
---batch_size_find       1 \
---lr_find               0 \
---n_trials              10 \
---limit_train_batches   0.05 \
---limit_val_batches     0.1 \
 --logger_offline        0 \
+--model_name_txt        "PubMedBERT" \
+--model_name_smi        "CHEM-BERT" \
 --data_name             "mt-mtr.pt"

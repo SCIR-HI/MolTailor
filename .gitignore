@@ -163,7 +163,7 @@ __pycache__/
 /models/
 
 logs/
-workspace/*
+*/workspace/*
 
 */data/*
 !*/data/utils/

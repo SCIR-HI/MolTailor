@@ -2,8 +2,11 @@
 
 source ~/.zshrc
 
-conda activate st
+conda activate moltailor
 
+if [ ! -d "../linear-probe-moleculenet/workspace" ]; then
+  mkdir "../linear-probe-moleculenet/workspace"
+fi
 
 # 1 feature extract
 model_name=$1

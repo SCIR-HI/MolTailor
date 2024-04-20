@@ -23,7 +23,7 @@ import pandas as pd
 
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping, Timer
 from pytorch_lightning.tuner import Tuner
-from lightning.pytorch.loggers import WandbLogger
+from pytorch_lightning.loggers import WandbLogger
 from pytorch_lightning.core.mixins import HyperparametersMixin
 
 from callbacks import TestMetricsReset

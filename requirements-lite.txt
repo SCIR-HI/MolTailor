@@ -7,3 +7,4 @@ pydantic
 transformers
 torch-geometric
 loguru
+optuna==3.2
